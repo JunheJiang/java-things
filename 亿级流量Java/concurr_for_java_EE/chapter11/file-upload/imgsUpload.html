@@ -1,0 +1,100 @@
+<html>
+<head>
+<script>
+window.onload = function(){
+	var input = document.getElementById("uploadFile");
+	var div;
+	// onchange事件加入显示文件（图片）方法。
+	input.onchange = function(){
+		showFile(this);
+	}
+	// 定义读文件方法函数
+	var showFile = function(obj){
+		// 获取input里面的文件组
+		var fileList = obj.files;
+		// 对文件组进行遍历，
+		// 可以到控制台打印出fileList去看看
+		for(var i=0; i<fileList.length; i++){
+			var reader = new FileReader();
+			reader.readAsDataURL(fileList[i]);
+			 // 当文件读取成功时执行的函数
+			reader.onload = function(e){
+				div = document.createElement('div');
+				div.innerHTML = '<img src="' + this.result + 
+				                    '" class="tmpShowImg" />';
+				document.getElementById("img-box").appendChild(div);
+			}
+		}
+	}
+}
+</script>
+<style type="text/css">
+/*最外层box，使用border-radius进行圆角Q版化*/
+.file-upload-box{
+    border-radius: 16px;
+	border: 1px solid gray;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    text-align: center;
+}
+/*中间文字描述*/
+.file-upload-box > span{
+	display: block;
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: gray;
+}
+/*input框*/
+.file-upload-box #uploadfile{
+	opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/*提交按钮美化*/
+.submit01 { 
+    border-radius: 3px;
+    margin-top:20px;
+	width: 120px; 
+	height: 30px;
+	border-width: 0px;  
+	background: #1E90FF; 
+	cursor: pointer; 
+	outline: none;
+	font-family: Microsoft YaHei; 
+	color: white; 
+	font-size: 17px;
+}
+
+.submit01:hover { 
+	background: #5599FF;
+}
+
+.tmpShowImg {
+    margin-bottom: 6px;
+	height: 120px;
+	width: 120px;
+}
+
+</style>
+</head>
+<body>
+  <div id="img-box"></div>
+  <form id="uploadImgs" method="post" action="http://localhost:8080/imgsUpload"
+        enctype="multipart/form-data">
+  <div class="file-upload-box">
+	<span>点击选择</span>
+	<input type="file" name="files" id="uploadFile" multiple="multiple" />
+  </div>
+  <button class="submit01" onclick="this.form.submit()" >开始上传</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,6 @@
+该程序包demo，实际上是包含了Netty服务端和Netty客户端两者一起的，所有启动文件有多个，可以按下面的步骤启动：
+
+1，先启动PusherServer.java，即Netty服务端最先启动。（PusherServer02为模拟Netty集群中第二个Netty服务端服务，这里可以不启动）
+2，配置systemConfig.properties,指出这次将要启动的Netty客户端是要连接到哪一个Netty服务端，例如：nettyServerIp=172.20.181.149nettyServerPort=8082
+3，然后启动PusherClient.java,
+4，进入KafkaSimulator.java中，配置一些内容参数，然后启动KafkaSimulator，这个代表消息中心中的kafka的模拟器

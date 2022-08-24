@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driverclassname: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/batch-test
+    username: root
+    password: ljp111
+    maxWait: 180000
+    min-idle : 5
+    initial-size : 5
+    
+  jpa:
+    database: MYSQL
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    
+  batch:
+    job:
+      enabled: false

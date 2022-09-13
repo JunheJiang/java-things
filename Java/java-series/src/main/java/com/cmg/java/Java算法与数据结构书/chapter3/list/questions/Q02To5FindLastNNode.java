@@ -1,6 +1,7 @@
 package com.cmg.java.Java算法与数据结构书.chapter3.list.questions;
 
-import com.cmg.java.algorithm算法.力扣.Lc002.AddTwoNumbers.ListNode;
+
+import com.cmg.java.Java算法与数据结构书.common.ListNode;
 
 /**
  * 找到链表中倒数第n个节点

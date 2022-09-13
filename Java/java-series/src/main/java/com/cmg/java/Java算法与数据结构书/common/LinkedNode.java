@@ -1,4 +1,4 @@
-package com.cmg.java.Java算法与数据结构书.chapter3.list;
+package com.cmg.java.Java算法与数据结构书.common;
 
 import lombok.Getter;
 import lombok.Setter;

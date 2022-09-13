@@ -1,6 +1,6 @@
 package com.cmg.java.Java算法与数据结构书.chapter3.list.questions;
 
-import com.cmg.java.Java算法与数据结构书.chapter3.list.LinkedNode;
+import com.cmg.java.Java算法与数据结构书.common.LinkedNode;
 import lombok.Getter;
 import lombok.Setter;
 

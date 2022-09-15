@@ -5,7 +5,7 @@ import com.cmg.java.Java算法与数据结构书.common.ListNode;
 /**
  * 有序链表末尾添加一个节点
  */
-public class Q011_AddANode {
+public class Q11_AddANode {
 //    时间复杂度O(n)
 //     空降复杂度O(1)
 

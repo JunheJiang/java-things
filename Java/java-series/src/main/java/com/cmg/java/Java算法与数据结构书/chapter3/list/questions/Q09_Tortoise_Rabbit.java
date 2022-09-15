@@ -8,7 +8,7 @@ package com.cmg.java.Java算法与数据结构书.chapter3.list.questions;
  * <p>
  * 如何证明再次相遇还是环起点
  */
-public class Q009_Tortoise_Rabbit {
+public class Q09_Tortoise_Rabbit {
 
     //L环长度
     //移动nL节点时 再次相遇

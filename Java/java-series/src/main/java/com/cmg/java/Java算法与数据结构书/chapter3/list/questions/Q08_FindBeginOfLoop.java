@@ -3,38 +3,40 @@ package com.cmg.java.Java算法与数据结构书.chapter3.list.questions;
 import com.cmg.java.Java算法与数据结构书.common.ListNode;
 
 /**
- * 环长度
+ * 有环找到环起点位置
  */
-public class Q010_LoopLength {
+public class Q08_FindBeginOfLoop {
+
     /**
      * 时间复杂度 O(n)
-     * 空间复杂度 O(1)
+     * * 空间复杂度 O(1)
+     * * 稳定性
      *
      * @param head
      * @return
      */
-    int findLength(ListNode head) {
+    ListNode findBeginOfLoop(ListNode head) {
         ListNode slowPtr = head, fastPtr = head;
-        boolean loopExits = false;
-        int counter = 0;
-        if (head == null) return 0;
+        boolean loopExists = false;
+        if (head == null) return null;
         while (fastPtr.getNext() != null &&
                 fastPtr.getNext().getNext() != null) {
             slowPtr = slowPtr.getNext();
-            fastPtr = fastPtr.getNext();
+            fastPtr = fastPtr.getNext().getNext();
             if (slowPtr == fastPtr) {
-                loopExits = true;
+                loopExists = true;
                 break;
             }
         }
-        if (loopExits) {
-            fastPtr = fastPtr.getNext();
+        //有环 继续走 去找起点位置
+        if (loopExists) {
+            slowPtr = head;
             while (slowPtr != fastPtr) {
                 fastPtr = fastPtr.getNext();
-                counter++;
+                slowPtr = slowPtr.getNext();
             }
-            return counter;
+            return slowPtr;
         }
-        return counter;
+        return null;
     }
 }

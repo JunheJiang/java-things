@@ -5,10 +5,11 @@ import com.cmg.java.Java算法与数据结构书.common.ListNode;
 /**
  * 逆转链表
  */
-public class Q012_ReverseList {
+public class Q12_ReverseList {
     /**
      * 时间复杂度O(n)
      * 空降复杂度O(1)
+     * 迭代版本
      *
      * @param head
      * @return

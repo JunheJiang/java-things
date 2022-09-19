@@ -21,6 +21,7 @@ public class Q14_FindMiddle {
         ListNode ptr1, ptr2;
         ptr1 = ptr2 = head;
         int i = 0;
+        
         while (ptr1.getNext() != null) {
             //只后移第一个指针
             if (i == 0) {

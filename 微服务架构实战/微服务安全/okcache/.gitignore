@@ -1,0 +1,17 @@
+target/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+# Eclipse IDE metadata
+.classpath
+.project
+.settings/
+
+# Mac files
+.DS_Store
+/.idea/
+dltestDB:/

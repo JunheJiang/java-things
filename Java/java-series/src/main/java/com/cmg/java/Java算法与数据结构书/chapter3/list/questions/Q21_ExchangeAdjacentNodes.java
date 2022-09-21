@@ -14,7 +14,7 @@ public class Q21_ExchangeAdjacentNodes {
         if (curNode == null || curNode.getNext() == null) {
             return;
         }
-        
+
         head = curNode.getNext();
 
         while (curNode != null && curNode.getNext() != null) {

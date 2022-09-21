@@ -10,7 +10,10 @@ import org.springframework.web.multipart.MultipartFile;
 import com.central.file.model.FileInfo;
 
 /**
- * 文件service
+ * 文件存储 service
+ * 增加MinIO
+ * S3 ceph
+ * FastDFS
  *
  * @author 作者 owen E-mail: 624191343@qq.com
 */

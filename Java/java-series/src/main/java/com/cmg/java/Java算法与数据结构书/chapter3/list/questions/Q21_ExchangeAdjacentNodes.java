@@ -4,6 +4,7 @@ import com.cmg.java.Java算法与数据结构书.common.ListNode;
 
 /**
  * 交互相邻节点
+ * O(n) O(1)
  */
 public class Q21_ExchangeAdjacentNodes {
 

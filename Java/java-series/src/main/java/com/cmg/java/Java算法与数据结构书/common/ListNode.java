@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class ListNode {
 
-    public int data;
+    public Integer data;
     public ListNode next;
     private ListNode random;
 
